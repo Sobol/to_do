@@ -63,6 +63,15 @@ input {
   width: 300px;
 }
 
+#tasks input {
+  position: relative;
+  float: left;
+  left: 0px;
+  border: 0 none;
+  background: transparent;
+  top: -5px;
+}
+
 button, input[type="button"], input[type="reset"], input[type="submit"], .back-link {
   height: 36px;
   border: 0 none;

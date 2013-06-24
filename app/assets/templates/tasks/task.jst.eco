@@ -1,0 +1,2 @@
+<input type="text" class="input-text" value="<%= @name %>" />
+<a href="" class="destroy">Delete</a>

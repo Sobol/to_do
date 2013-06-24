@@ -5,6 +5,8 @@ ruby '2.0.0'
 
 gem 'pg'
 gem 'will_paginate'
+gem 'inherited_resources'
+gem 'rack-offline', :git => 'git://github.com/wycats/rack-offline.git', :ref => '4b92a41c23f2b2e2167610f17e388db606b5046a'
 
 group :development do
   gem 'guard-livereload', require: false
@@ -24,10 +26,11 @@ group :test do
 end
 
 group :assets do
-    gem 'sass-rails',   '~> 3.2.5'
-    gem 'coffee-rails', '~> 3.2.2'
-    gem 'uglifier', '>= 1.2.4'
-    gem 'bootstrap-sass', '~> 2.0.3.1'
+  gem 'coffee-rails'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'jquery-rails'
+  gem 'sprockets-commonjs'
+  gem 'backbone-on-rails'
 end
-
-gem "jquery-rails", "2.3.0"
