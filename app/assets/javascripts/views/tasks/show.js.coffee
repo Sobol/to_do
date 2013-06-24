@@ -12,7 +12,7 @@ class ToDo.Views.TasksShow extends Backbone.View
     @listenTo(@model, 'destroy', @remove)
 
   render: ->
-    @$el.html '<input type="text" class="input-text" value='+@model.get("name")+'></input><a href="" class="destroy">Delete</a>'
+    @$el.html '<input type="text" class="input-text" value="'+@model.get("name")+'"></input><a href="" class="destroy">Delete</a>'
     @$el.attr 'id', @model.id
     @
 

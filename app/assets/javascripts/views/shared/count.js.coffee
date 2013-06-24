@@ -1,4 +1,4 @@
-class CountView extends Backbone.View
+class ToDo.Views.CountView extends Backbone.View
   el: '#count'
   events:
     'click .full' : 'fullSync'
