@@ -1,18 +1,17 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: to_do_development
+  database: 
   pool: 5
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: to_do_test
+  database: 
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: to_do_production
+  database: 
   pool: 5
-
