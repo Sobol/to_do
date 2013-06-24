@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="columns" id="content">
+    <%= form_for Task.new do |f| %>
+      <% if flash[:error] %>
+        <p class="error"><%= flash[:error] %></p>
+      <% end %>
+      <div class="field">
+        <%= f.label :name  %>
+        <%= f.text_field :name %>
+        <%= f.submit "Add +" %>
+      </div>
+    <% end %>
+    <ul id="items">
+      <li>
+        Cokolwiek
+      </li>
+      <li>
+        Cokolwiek
+      </li>
+
+      <li>
+        Cokolwiek
+      </li>
+
+      <li>
+        Cokolwiek
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="three columns" id="count">
+    <div class="panel">
+      <h3>Total: <span id="counter"></span></h3>
+      <%= link_to "Full sync", "", class:"full"%><br>
+      <%= link_to "Incremental syn", "", class:"part"%><br>
+    </div>
+  </div>
+</div>

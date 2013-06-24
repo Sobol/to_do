@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #5E5E5E;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #262626;
+  box-shadow: inset 0px 1px 0px 0px #484848, inset 0px -1px 0px 0px #3c3c3c, inset 0px 0px 0px 1px #404040;
+  border: solid 1px #000000;
+
+  section {
+    width: 1024px;
+    margin: 0 auto;
+    h1 {
+      margin: 3px 0;
+      color: #ffffff;
+    }
+  }
+}
+
+#main {
+  width: 1024px;
+  margin: 20px auto;
+}
+
+
+label {
+  margin: 0px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #2D2D2D;
+}
+
+input {
+  position: absolute;
+  left: 300px;
+  height: 30px;
+  font-size: 18px;
+  width: 300px;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .back-link {
+  height: 36px;
+  border: 0 none;
+  background: url('button.png') repeat;
+  letter-spacing: -1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #2C2C2C;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 0px 20px;
+  width: auto !important;
+  left: 620px;
+}
+
+a {
+  display: inline;
+  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 18px;
+  color: #2D2D2D;
+}
+
+ul {
+  padding: 0;
+
+  li {
+    margin: 7px 0;
+    background-repeat: repeat-x;
+    border-bottom-color: #cacaca;
+    list-style: none;
+    height: 20px;
+    width: 400px;
+    padding: 10px 20px;
+    background-color: #eaeaea;
+    background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+    background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+    background-image: linear-gradient(#fafafa, #eaeaea);
+    background-repeat: repeat-x;
+    border: 1px solid #eaeaea;
+    border-bottom-color: #cacaca;
+    border-radius: 3px;
+  }
+
+  li:nth-child(odd) {
+    background-color: #ffffff !important;
+    background-image: none;
+  }
+}

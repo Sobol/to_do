@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <section>
+      <h1>List of things TO DO</h1>
+    </section>
+  </header>
 
-<%= yield %>
-
+  <section id="main">
+    <%= yield %>
+  </section>
 </body>
 </html>
