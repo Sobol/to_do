@@ -1,4 +1,5 @@
 class ToDo.Views.TasksShow extends Backbone.View
+  template:   JST['tasks/task']
   tagName:   'li'
   className: 'panel task'
   events:
@@ -37,7 +38,7 @@ class ToDo.Views.TasksShow extends Backbone.View
     $("#counter-"+@model.get('id')).text(current_counter+1)
 
   render: ->
-    @$el.html '<input type="text" class="input-text" value="'+@model.get("name")+'"><a href="" class="destroy">Delete</a></input><a href="" class="minus-one"></a><a href="" class="plus-one"></a><span class="counter" id="counter-'+@model.get("id")+'">'+@model.get("counter")+'</span>'
+    @$el.html @template({model: @model})
     @$el.attr 'id', @model.id
     @
 

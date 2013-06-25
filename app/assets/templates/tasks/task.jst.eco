@@ -1,2 +1,5 @@
-<input type="text" class="input-text" value="<%= @name %>" />
+<input type="text" class="input-text" value="<%= @model.get("name")  %>"></input>
 <a href="" class="destroy">Delete</a>
+<a href="" class="minus-one"></a>
+<a href="" class="plus-one"></a>
+<span class="counter" id="counter-'<%= @model.get("id") %>"><%= @model.get("counter") %></span>
