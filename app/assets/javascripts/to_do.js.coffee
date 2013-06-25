@@ -10,4 +10,7 @@ window.ToDo =
       view = new ToDo.Views.CountView(collection: tasks).render()
 
     tasks.fetch()
+$ ->
+  ToDo.initialize()
+
 

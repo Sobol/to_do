@@ -5,6 +5,14 @@ class ToDo.Views.TasksIndex extends Backbone.View
 
   initialize: ->
     @listenTo(@collection, 'add reset', @render)
+    @counters = new ToDo.Collections.TaskCounters()
+    @counters.once 'reset', ->
+      console.log("adsadsads")
+      old_counters = new ToDo.Collections.TaskCounters()
+      old_counters.storage.clear()
+
+    console.log("123")
+    @counters.fetch()
 
   render: ->
     @$('#tasks').html ''
@@ -12,7 +20,7 @@ class ToDo.Views.TasksIndex extends Backbone.View
     @
 
   addOne: (task) =>
-    view = new ToDo.Views.TasksShow(model: task)
+    view = new ToDo.Views.TasksShow({model: task, counters: @counters})
     $('#tasks').append view.render().el
 
   newTask: (event) ->
