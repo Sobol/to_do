@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns" id="content">
-    <%= form_for Task.new do |f| %>
+    <%= form_for Task.new, url: api_tasks_path do |f| %>
       <% if flash[:error] %>
         <p class="error"><%= flash[:error] %></p>
       <% end %>

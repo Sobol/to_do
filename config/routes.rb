@@ -1,8 +1,7 @@
 ToDo::Application.routes.draw do
-  resources :tasks
   offline = Rack::Offline.configure do
-    cache ActionController::Base.helpers.asset_path("application.css")
-    cache ActionController::Base.helpers.asset_path("application.js")
+    cache ActionController::Base.helpers.asset_path("application.css.scss")
+    cache ActionController::Base.helpers.asset_path("application.js.coffee")
     network "/"
   end
 
@@ -12,5 +11,5 @@ ToDo::Application.routes.draw do
 
   match "/application.manifest" => offline
 
-  root :to => 'tasks#index'
+  root :to => 'home#show'
 end
