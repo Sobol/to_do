@@ -23,5 +23,7 @@ class ToDo.Views.TasksIndex extends Backbone.View
 
   newTask: (event) ->
     event.preventDefault()
-    @collection.create { name: @$('#task_name').val() }, { success: => @$('#task_name').val('') }
-
+    if $.trim(@$('#task_name').val()).length > 0
+      @collection.create { name: @$('#task_name').val() }, { success: => @$('#task_name').val('') }
+    else
+      @$('#task_name').addClass("error")

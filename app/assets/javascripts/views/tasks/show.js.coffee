@@ -42,7 +42,8 @@ class ToDo.Views.TasksShow extends Backbone.View
     @
 
   save: ->
-    @model.save name: @$('input').val()
+    if $.trim(@$('#task_name').val()).length > 0
+      @model.save name: @$('input').val()
 
   destroy: ->
     @model.destroy()
