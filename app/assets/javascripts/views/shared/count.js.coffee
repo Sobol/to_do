@@ -11,8 +11,10 @@ class ToDo.Views.CountView extends Backbone.View
     @$('#counter').html @collection.length
     @
 
-  fullSync: ->
+  fullSync:(e) ->
+    e.preventDefault()
     @collection.storage.sync.full()
 
-  incrementalSync: ->
+  incrementalSync:(e) ->
+    e.preventDefault()
     @collection.storage.sync.incremental()

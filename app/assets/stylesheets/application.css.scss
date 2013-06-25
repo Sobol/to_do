@@ -43,6 +43,7 @@ header {
 #main {
   width: 1024px;
   margin: 20px auto;
+  position: relative;
 }
 
 
@@ -57,7 +58,7 @@ label {
 
 input {
   position: absolute;
-  left: 300px;
+  left: 100px;
   height: 30px;
   font-size: 18px;
   width: 300px;
@@ -84,7 +85,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .back-l
   color: #FFFFFF;
   padding: 0px 20px;
   width: auto !important;
-  left: 620px;
+  left: 420px;
 }
 
 a {
