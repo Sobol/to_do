@@ -7,11 +7,9 @@ class ToDo.Views.TasksIndex extends Backbone.View
     @listenTo(@collection, 'add reset', @render)
     @counters = new ToDo.Collections.TaskCounters()
     @counters.once 'reset', ->
-      console.log("adsadsads")
       old_counters = new ToDo.Collections.TaskCounters()
       old_counters.storage.clear()
 
-    console.log("123")
     @counters.fetch()
 
   render: ->
